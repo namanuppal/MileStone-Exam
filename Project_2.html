@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hospital</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        /* Ist */
+        .one-main{
+            display: flex; 
+            background-image: url(/assets/background.png);
+            background-repeat: no-repeat;
+            height: 600px;
+            margin: 0px 100px;
+        }
+        a , .one-head , .btn-1{
+            color: #fff;
+        }
+        .one-head{
+            margin-left: 150px;
+            position: absolute;
+        }
+        a{
+            position: absolute;
+            left: 200px;
+            margin-left: 150px;
+            top: 30px;
+        }
+        .home{
+            left: 200px;
+        }
+        .product{
+            left: 300px;
+        }
+        .pricing{
+            left: 400px;
+        }
+        .contact{
+            left: 500px;
+        }
+        .btn-1{
+            background-color: #6495ed;
+            position: absolute;
+            left: 500px;
+            top: 30px;
+            margin-left: 300px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        .two-head{
+            position: absolute;
+            left: 150px;
+            color: #fff;
+            top: 200px;
+            width: 200px;
+            font-size: xx-large;
+        }
+        .para-head{
+            position: absolute;
+            top: 300px;
+            color: #fff;
+            left: 150px;
+            width: 250px;
+        }
+        .btn-2{
+            position: absolute;
+            left: 150px;
+            top: 370px;
+            background-color: #6495ed;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+        }
+        .btn-3{
+            position: absolute;
+            left: 300px;
+            top: 370px;
+            background-color: transparent;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            color: #fff;
+        }
+        .form{
+            position: absolute;
+            left: 750px;
+            top: 130px;
+            background-color: #fff;
+            border-radius: 20px;
+            filter: drop-shadow(0 25px 25px);
+        }
+        .three-head{
+            text-align: center;
+        }
+        .btn-4{
+            background-color: #6495ed;
+            margin: 20px 55px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        #name , #email , #list{
+            margin: 10px 30px;
+            width: 200px;
+        }
+        /* IInd */
+        .one-sec, .para-sec{
+            text-align: center;
+        }
+        .image-1{
+            width: 30px;
+        }
+        .more{
+            color: #007d8b;
+            margin: 10px 30px;
+            cursor: pointer;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        .c-care{
+            background-color: rgb(0, 170, 255);
+            padding: 10px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .box-1, .box-2, .box-3{
+            border: 1px solid;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        .tags{
+            list-style-type: lower-alpha;
+        }
+        /* IIIrd */
+       .boxes{
+        display: flex;
+        justify-content: center;
+       }
+       .image-2{
+        width: 100px;
+       }
+       .one-thri, .para-thri{
+        text-align: center;
+       }
+       .one-thri{
+        margin-top: 100px;
+       }
+       .boxes-1{
+        border: 1px solid;
+        border-radius: 20px;
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+       }
+       .boxes-2{
+        border: 1px solid;
+        border-radius: 20px;
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+       }
+       .boxes-3{
+        border: 1px solid;
+        border-radius: 20px;
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+       }
+       /* FAQ */
+       .faq, .para-faq{
+        text-align: center;
+       }
+       .faq{
+        margin-top: 100px;
+       }
+       .box-faq-1, .box-faq-2, .box-faq-3{
+        display: flex;
+        justify-content: space-around;
+        font-size: smaller;
+        width: 1000px;
+        margin-left: 100px;
+       }
+       /* pricing */
+       .head-pri, .para-pri{
+        text-align: center;
+       }
+       .head-pri{
+        margin-top: 100px;
+       }
+       .pri-box{
+        display: flex;
+        flex-wrap: wrap;
+       }
+       .h-free, .p-free{
+           text-align: center;
+        }
+        #free, #standard, #premium{
+            text-align: center;
+            color: #6495ed;
+        }
+        .TFF{
+            margin-left: 30px;
+            background-color: #6495ed;
+            color: #fff;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .TFF-2{
+            margin-left: 50px;
+            background-color: #6495ed;
+            color: #fff;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .h-standard,.p-standard{
+            text-align: center;
+        }
+        .ul-one{
+         border: 1px solid #1da3dd;
+         border-radius: 20px;
+         padding: 10px;
+         position: absolute;
+         left: 180px;
+        }
+        .ul-two{
+            background-color: #070742;
+            color: #fff;
+            width: 300px;
+            height: 350px;
+            border-radius: 20px;
+            padding: 10px;
+            position: absolute;
+            right: 500px;
+        }
+        .ul-three{
+         border: 1px solid #1da3dd;
+         border-radius: 20px;
+         padding: 10px;
+         position: absolute;
+         right: 230px;
+        }
+        .ul{
+            list-style-type: none;
+        }
+        /* touch */
+        .touch{
+            display: flex;
+            justify-content: space-around;
+            background-color: #070742;
+            margin-top: 400px;
+            color: #fff;
+            padding: 20px;
+        }
+        .h-get{
+            font-size: 40px;
+        }
+        .p-get{
+            width: 400px;
+        }
+        .sub, .btn{
+            margin-top: 50px;
+        }
+        .sub{
+            padding: 10px 20px;
+        }
+        .btn{
+            padding: 10px;
+            background-color: #6495ed;
+            border: none;
+        }
+        /* final */
+        .final{
+            display: flex;
+            justify-content: space-around;
+        }
+        .social{
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+        .last{
+            list-style-type: none;
+        }
+        /* end */
+        .end{
+            background-color: #808080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ist -->
+    <div class="one-main">
+        <h4 class="one-head">Brand Name</h4>
+        <nav class="links-head">
+            <a href="#" class="home">Home</a>
+            <a href="#" class="product">Product</a>
+            <a href="#" class="pricing">Pricing</a>
+            <a href="#" class="contact">Contact</a>
+            <button class="btn-1">Get Quote Now --></button>
+        </nav>
+            <h2 class="two-head">Meet the Best Hospital</h2>
+            <p class="para-head">We know how large objects will act, but thing on a small scale.</p>
+            <button class="btn-2">Get Quote Now</button>
+            <button class="btn-3">Learn More</button>
+            
+            <form action="backend.php" class="form">
+                <h2 class="three-head">Book Appointment</h2>
+                <br><label for="name">Name *</label>
+                <br><input type="name" id="name" placeholder="Full Name *">
+                <br><label for="email">Eamil Address *</label>
+                <br><input type="email" id="email" placeholder="example@gmail.com">
+                <br><label for="list">Departement *</label>
+                <br><select name="list" id="list">
+                    <option value="select">Please Select</option>
+                    <option value="select">Please Select</option>
+                    <option value="select">Please Select</option>
+                </select>
+                <br><label for="list">Time *</label>
+                <br><select name="list" id="list">
+                    <option value="select">4:00 Available</option>
+                    <option value="select">4:00 Available</option>
+                    <option value="select">4:00 Available</option>
+                </select>
+                <br><button class="btn-4">Book Appointment</button>
+            </form>
+    </div>
+    <!-- IInd -->
+    <div class="two-main">
+        <h1 class="one-sec">Leading Medicine</h1>
+        <p class="para-sec">Problems trying to resalve the conflict between the two major realms of Classiest physics Newtonian mechanics</p>
+        <div class="box">
+            <div class="box-1">
+                <div class="c-care">
+                <img src="/assets/img.png" class="image-1" alt="image">
+                <span>Emergency Case</span></div>
+                <ul class="tags">
+                    <li>The best products start with Figma</li>
+                    <li>Design with real data</li>
+                    <li>Lightning fast prototyping</li>
+                    <li>Fastet way to organize</li>
+                    <li>Work at the speed of thought.</li>
+                </ul>
+                <div class="more">Learn More</div>
+            </div>
+            <div class="box-2">
+                <div class="c-care">
+                <img src="/assets/img.png" class="image-1" alt="image">
+                <span>Cancer Case</span></div>
+                <ul class="tags">
+                    <li>The best products start with Figma</li>
+                    <li>Design with real data</li>
+                    <li>Lightning fast prototyping</li>
+                    <li>Fastet way to organize</li>
+                    <li>Work at the speed of thought.</li>
+                </ul>
+                <div class="more">Learn More</div>
+            </div>
+            <div class="box-3">
+                <div class="c-care">
+                <img src="/assets/img.png" class="image-1" alt="image">
+                <span>Health Queries</span></div>
+                <ul class="tags">
+                    <li>The best products start with Figma</li>
+                    <li>Design with real data</li>
+                    <li>Lightning fast prototyping</li>
+                    <li>Fastet way to organize</li>
+                    <li>Work at the speed of thought.</li>
+                </ul>
+                <div class="more">Learn More</div>
+            </div>
+        </div>
+    </div>
+    <!-- IIIrd -->
+    <div class="three-main">
+        <h1 class="one-thri">Leading Medicine</h1>
+        <p class="para-thri">Problems trying to resalve the conflict between the two major realms of Classiest physics Newtonian mechanics</p>
+        <div class="boxes">
+            <div class="boxes-1">
+                <img src="/assets/Rating_stars_4.0.svg.png" class="image-2" alt="ratings">
+                <p class="para-thri-1">Slate helps you see how many more days you need to work to reach your goal.</p>
+                <img src="/assets/user.1.png" class="image-3" alt="user">
+            </div>
+            <div class="boxes-2">
+                <img src="/assets/Rating_stars_4.0.svg.png" class="image-2" alt="ratings">
+                <p class="para-thri-1">Slate helps you see how many more days you need to work to reach your goal.</p>
+                <img src="/assets/user.2.png" class="image-3" alt="user">
+            </div>
+            <div class="boxes-3">
+                <img src="/assets/Rating_stars_4.0.svg.png" class="image-2" alt="ratings">
+                <p class="para-thri-1">Slate helps you see how many more days you need to work to reach your goal.</p>
+                <img src="/assets/user.3.png" class="image-3" alt="user">
+            </div>
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div class="faq-1">
+        <h1 class="faq">FAQ</h1>
+        <p class="para-faq">Problems trying to resalve the conflict between the two major realms of Classiest physics Newtonian mechanics</p>
+        <div class="box-faq-1">
+            <div class="faq-1">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i> the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-2">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-3">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+        </div>
+        <div class="box-faq-2">
+            <div class="faq-1">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i> the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-2">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-3">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+        </div>
+        <div class="box-faq-3">
+            <div class="faq-1">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i> the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-2">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+            <div class="faq-3">
+                <h1 class="one-faq"><i class="fa-thin fa-greater-than" style="color: #1da3dd;"></i>the quick fox jumps over the lazy dog</h1>
+                <p class="para-one">Things on a very small scale behave like nothing</p>
+            </div>
+        </div>
+    </div>
+    <!-- pricing -->
+    <div class="pricing">
+        <h1 class="head-pri">Pricing</h1>
+        <p class="para-pri">Problems trying to resalve the conflict between the two major realms of Classiest physics Newtonian mechanics</p>
+        
+        <div class="pri-box">
+            <div class="ul-one">
+                <h1 class="h-free">FREE</h1>
+                <p class="p-free">Organize across all apps by hand</p>
+                <h1 id="free">0 <sup>$</sup>Per Month</h1>
+                <ul class="ul">
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ❌ 1GB Cloud storage</li>
+                    <li> ❌ Email and community support</li>
+                </ul>
+                <button class="TFF">Try for free</button>
+            </div>
+            <div class="ul-two">
+                <h1 class="h-standard">STANDARD</h1>
+                <p class="p-standard">Organize across all apps by hand</p>
+                <h1 id="standard">9.99 <sup>$</sup>Per Month</h1>
+                <ul class="ul">
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ 1GB Cloud storage</li>
+                    <li> ✓ Email and community support</li>
+                </ul>
+                <button class="TFF-2">Try for free</button>
+            </div>
+            <div class="ul-three">
+                <h1 class="h-premium">PREMIUM</h1>
+                <p class="p-premium">Organize across all apps by hand</p>
+                <h1 id="premium">19.99 <sup>$</sup>Per Month</h1>
+                <ul class="ul">
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ Ultimated product updates</li>
+                    <li> ✓ 1GB Cloud storage</li>
+                    <li> ✓ Email and community support</li>
+                </ul>
+                <button class="TFF">Try for free</button>
+            </div>
+        </div>
+    </div>
+    <!-- touch -->
+    <div class="touch">
+        <div class="t-one">
+            <h1 class="h-get">Get In Touch</h1>
+            <p class="p-get">The gradual accumulation of information about atomic and small-scale behaviour during the first of the 20th</p>
+        </div>
+        <div class="e-one">
+            <input type="email" class="sub" placeholder="Your Email">
+            <span><button class="btn">Subscribe</button></span>
+        </div>
+    </div>
+    <!-- final -->
+    <div class="final">
+        <div class="last-1">
+        <h1 class="h-finalone">Get In Touch</h1>
+        <p class="pfinalone">the quick fox jumps over the lazy dog</p>
+        <div class="social">
+            <i class="fa-brands fa-facebook" style="color: #51fbf8;"></i>
+            <i class="fa-brands fa-instagram" style="color: #51fbf8;"></i>
+            <i class="fa-brands fa-twitter" style="color: #51fbf8;"></i>
+        </div>
+        </div>
+        <div class="last-2">
+            <h1 class="hfinaltwo">Company info</h1>
+            <ul class="last">
+                <li>About Us</li>
+                <li>Carrier</li>
+                <li>We are hiring</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div class="last-3">
+            <h1 class="hfinalthree">Features</h1>
+            <ul class="last">
+                <li>Business Marketing</li>
+                <li>User Analytic</li>
+                <li>Live Chat</li>
+                <li>Ultimated Support</li>
+            </ul>
+        </div>
+        <div class="last-4">
+            <h1 class="hfinalfour">Resources</h1>
+            <ul class="last">
+                <li>IOS & Android</li>
+                <li>Watch a Demo</li>
+                <li>Customers</li>
+                <li>API</li>
+            </ul>
+        </div>
+    </div>
+    <!-- end -->
+    <div class="end">Made With Love By Figmaland All Right Reserved</div>
+</body>
+</html>

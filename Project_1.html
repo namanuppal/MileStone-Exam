@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-GURU</title>
+    <link rel="shortcut icon" href="/E-Guru/logo.png" type="image/x-icon">
+    <style>
+        *{
+            text-decoration: none;
+        }
+        /* head */
+        .head_main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        svg{
+            display: none;
+        }
+        .user{
+            display: none;
+        }
+        .logo{
+            margin-left: 50px;
+            cursor: pointer;
+        }
+        .title{
+            margin-left: 10px;
+            font-size: xx-large;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a{
+            color: #000;
+        }
+        .home{
+            color: #ff4500;
+            margin-left: 200px;
+        }
+        .us{
+            margin-left: 50px;
+        }
+        .feat{
+            margin-left: 50px;
+        }
+        .works{
+            margin-left: 50px;
+        }
+        .btn_1{
+            background: transparent;
+            padding: 10px 30px;
+            margin-left: 200px;
+        }   
+        /* main */
+        .main_main{
+            display: flex;
+            margin-left: 60px;
+            margin-top: 100px;
+            margin-bottom: 200px;
+        }
+        .dot-1{
+            position: absolute;
+            top: 150px;
+            left: 700px;
+            width:350px;
+        }
+        .dot-2{
+            position: absolute;
+            top: 145px;
+            left: 750px;
+            width: 250px;
+        }
+        .dot-3{
+            position: absolute;
+            top: 150px;
+            left: 700px;
+            width: 350px;
+        }
+        .heading_1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+            font-size: 50px;
+        }
+        .para_1{
+            border-left: 1px solid;
+            padding: 5px;
+            font-size: large;
+            color: #808080;
+        }
+        .main_image{
+            width: 500px;
+        }
+        .buttons{
+            margin-top: 30px;
+        }
+        .btn_2{
+            background-color: #fa581e;
+            padding: 10px 30px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btn_3{
+            background-color: transparent;
+            padding: 10px 30px;
+            border: 1px solid;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .curve-arrow{
+            position: absolute;
+            left: 400px;
+            bottom: 100px;
+        }
+        .orange-arrow{
+            position: absolute;
+            left: 600px;
+        }
+        .green-arrow{
+            position: absolute;
+            left: 600px;
+            bottom: 90px;
+        }
+        .circle{
+            position: absolute;
+            right: 200px;
+            bottom: 100px;
+        }
+        /* foot */
+        .foot{
+            background-color: #060541;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 80px;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        .one{
+            width: 250px;
+        }
+        .two{
+            width: 250px;
+        }
+        .three{
+            width: 250px;
+        }
+        .four{
+            width: 250px;
+        }
+        .teacher{
+            background-color: green;
+            color: #fff;
+            padding: 3px;
+            border-radius: 10px;
+        }
+        .course{
+            background-color: #ff4500;
+            color: #fff;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        .support{
+            background-color: #131351;
+            color: #fff;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        .p-one , .p-two , .p-three , .p-four{
+            color: #7c7b7b;
+            font-weight: bolder;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* head */
+            .head_main{
+                display: grid;
+            }
+            .home , .us , .feat , .works , .btn_1{
+                display: none;
+            }
+            svg , .user{
+                display: block;
+            }
+            .logo , .title{
+                position: absolute;
+                right:300px;
+                top: 10px;
+            }
+            .logo{
+                right: 430px;
+            }
+            .user{
+                position: absolute;
+                right: 80px;
+                top: 10px;
+                width: 50px;
+            }
+
+            /* main */
+            .main_main{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .dot-1{
+                position: absolute;
+                left: 150px;
+                top: 400px;
+            }
+            .dot-2{
+                position: absolute;
+                left: 180px;
+                top: 400px;
+            }
+            .dot-3{
+                position: absolute;
+                left: 150px;
+                top: 400px;
+            }
+            .heading_1{
+                position: absolute;
+                top: 100px
+            }
+            .para_1{
+                position: absolute;
+                top: 250px;
+                font-size: x-large;
+            }
+            .buttons{
+                grid-area: btn;
+                position: absolute;
+                top: 800px;
+                left: 150px;
+                padding: 20px;
+            }
+            .btn_2{
+                padding: 20px 50px;
+            }
+            .btn_3{
+                padding: 20px 50px;
+            }
+            .curve-arrow{
+                position: absolute;
+                top: 950px;
+                left: 400px;
+                width: 100px;
+            }
+            .orange-arrow{
+                position: absolute;
+                left: 150px;
+                top: 400px;
+            }
+            .green-arrow{
+                position: absolute;
+                left: 140px;
+                top: 750px;
+            }
+            .circle{
+                position: absolute;
+                right: 150px;
+                top: 700px;
+            }   
+            .main_main{
+                margin-top: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Head -->
+    <div class="head_main">
+        <header class="head">
+            <nav class="links">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <img src="/E-Guru/logo.png" class="logo" alt="logo">
+                <span class="title">E GURU</span>
+                <a href="#" class="home">Home</a>
+                <a href="#" class="us">About Us</a>
+                <a href="#" class="feat">Features</a>
+                <a href="#" class="works">How It Works</a>
+                <button class="btn_1">Sign Up</button>
+                <img src="/E-Guru/user-profile.png" class="user" alt="user">
+            </nav>
+        </header>
+    </div>
+    <!-- Main -->
+    <div class="main_main">
+        <div>
+            <h1 class="heading_1">STUDY FROM <br> HOME WITH EXPERT</h1>
+        <p class="para_1">A learning system based on formalised <br> teaching with the help of resources.</p>
+        <div class="buttons">
+            <button class="btn_2">Get Started</button>
+                <span>
+                <button class="btn_3">Learn More</button>
+                </span>
+        </div>
+        </div>
+        <div>
+            <div class="main_image">
+                <img src="/E-Guru/main-image-bg.png" class="dot-1" alt="1">
+                <img src="/E-Guru/main-image.png" class="dot-2" alt="2">
+                <img src="/E-Guru/main-image-pattern.png" class="dot-3" alt="3">
+            </div>
+            <img src="/E-Guru/curve-arrow.png" class="curve-arrow" alt="curve-arrow">
+            <img src="/E-Guru/orange-arrow.png" class="orange-arrow" alt="orange-arrow">
+            <img src="/E-Guru/green-arrow.png" class="green-arrow" alt="green-arrow">
+            <img src="/E-Guru/circle.png" class="circle" alt="circle">
+        </div>
+    </div>
+    <!-- foot -->
+    <div class="foot">
+            <div class="one">
+                <h1 class="h-one">WHY WE ARE THE BEST</h1>
+                <p class="p-one">a learning system based on formalised teaching with help of....</p>
+            </div>
+            <div class="two">
+                <img src="/E-Guru/vector3.png" class="teacher" alt="teacher">
+                <h5 class="h-two">EXPERT TEACHER</h5>
+                <p class="p-two">a learning system based on formalised teaching</p>
+            </div>
+            <div class="three">
+                <img src="/E-Guru/vector2.png" class="course" alt="course">
+                <h5 class="h-three">ONLINE COURSES</h5>
+                <p class="p-three">a learning system based on formalised teaching</p>
+            </div>
+            <div class="four">
+                <img src="/E-Guru/vector1.png" class="support" alt="support">
+                <h5 class="h-four">24/7 SUPPORT</h5>
+                <p class="p-four">a learning system based on formalised teaching</p>
+            </div>
+    </div>
+</body>
+</html>
